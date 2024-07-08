@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: whats-next.html 
+keywords: what you can do, knowledge base 
+summary: 現在您已經使用企業資料建立知識庫、並將其部署給使用者、您可以管理知識庫、資料來源和 RAG 基礎架構、包括 ONTAP 檔案系統的 FSX 。 
+---
+= 接下來您可以做什麼
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+現在您已經使用企業資料建立知識庫、並將其部署給使用者、您可以管理知識庫、資料來源和 RAG 基礎架構、包括 ONTAP 檔案系統的 FSX 。
+
+管理知識庫元件時、您可以執行的一些工作包括：
+
+* 更新資料來源的內容、或新增資料來源、並將這些變更與您的知識庫和聊天機器人同步。
+* 管理資料來源設定、包括區塊策略和權限認知（ SMB 檔案存取）。
+* 管理您的知識庫設定、包括聊天模式和對話啟動器。
+* 進行變更後、請取消發佈知識庫或重新發佈知識庫。
+* 備份並保護適用於 ONTAP 檔案系統的 FSX 上的重要資料、確保您的知識庫資料和其他基礎架構元件隨時可用。
+
+
+如需管理適用於 ONTAP 檔案系統的 FSX 的相關資訊、請移至 https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Workload Factory for Amazon FSX for NetApp ONTAP 文件"^] 以檢視您可以使用的備份與保護功能。

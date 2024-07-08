@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: requirements.html 
+keywords: ai, chatbot, prerequisites, bedrock, fsx for ontap, prerequisites, requirements 
+summary: 在您建置知識庫之前、請確保已正確設定 Workload Factory 和 AWS 。這包括擁有 AWS 登入認證、部署的 ONTAP 檔案系統 FSX 、其中包含您想要整合至知識庫的資料來源、存取 Amazon bedrock AI 服務等。 
+---
+= GenAI 需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在您建置知識庫之前、請確保已正確設定 Workload Factory 和 AWS 。這包括擁有 AWS 登入認證、部署的 ONTAP 檔案系統 FSX 、其中包含您想要整合至知識庫的資料來源、存取 Amazon bedrock AI 服務等。
+
+Workload Factory 登入與帳戶:: 您必須登入 Workload Factory 並建立帳戶。
++
+--
+https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["深入瞭解登入及建立帳戶"^]
+
+--
+AWS 認證與權限:: 您需要使用自動化權限將 AWS 認證新增至 Workload Factory 、這表示您將在 GenAI 的工作負載工廠模式中使用工作負載工廠。
++
+--
+目前不支援 _ 基本 _ 模式和 _ 讀取 _ 模式權限。
+
+設定認證時、如下所示選取權限、可讓您完全存取以管理 ONTAP 檔案系統的 FSX 、並部署及管理知識庫和 chatbot 所需的 GenAI EC2 執行個體和其他 AWS 資源。
+
+image:screenshot-ai-permissions.png["顯示完整管理 AI 資源權限設定的螢幕擷取畫面。"]
+
+https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["瞭解如何將 AWS 認證新增至工作負載工廠"^]
+
+--
+Amazon bedrock:: Amazon 基礎架構可讓您使用基礎模型、並提供建置泛用 AI 應用程式的功能。
++
+--
+在開始使用適用於 GenAI 的 Workload Factory 之前、您必須先設定 Amazon 基礎。您的 GenAI 部署必須位於啟用 Amazon 基礎的 AWS 區域。
+
+* https://docs.aws.amazon.com/bedrock/latest/userguide/setting-up.html["AWS 文件：設定 Amazon bedrock"^]
+* https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["AWS 文件： Amazon bedrock 知識庫支援的區域和模型"^]
+
+
+--
+內嵌模型:: 建立知識庫之前、您必須先啟用您計畫使用的內嵌模型。支援下列內嵌模型：
++
+--
+* Titan 嵌入式 G1 - 文字
+* Titan 內嵌文字 v2
+* Titan Multic形式 嵌入式 G1
++
+https://aws.amazon.com/bedrock/titan/["深入瞭解 Amazon Titan"^]
+
+
+
+--
+聊天模式:: 您必須先啟用您計畫使用的基礎聊天模式、才能建立知識庫。支援下列 Claude 聊天模式：
++
+--
+* Claude 3.5 Sonnet
+* Claude 3 Opus
+* Claude 3 Haiku
+* Claude 3 Sonnet
+* Claude 2.1
+* Claude 2.0
++
+由於各 AWS 地區的機型支援不盡相同、請參閱 https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html["此 AWS 文件頁面"^] 、確認您可以在計畫部署知識庫的地區使用哪些機型。
+
++
+深入瞭解可選擇的機型、協助您選擇： https://aws.amazon.com/bedrock/claude/["Anthropic 在 Amazon bedrock 的 Claude"^]
+
+
+
+--
+適用於 ONTAP 檔案系統的 FSX:: 您至少需要一個適用於 ONTAP 檔案系統的 FSX ：
++
+--
+* NetApp GenAI 引擎將使用一個檔案系統來儲存知識庫所使用的向量資料庫。
++
+此適用於 ONTAP 檔案系統的 FSX 必須使用 FlexVol Volume 。不支援支援的支援。FlexGroup
+
+* 一或多個檔案系統將包含您要整合至知識庫的資料來源。
++
+一個適用於 ONTAP 檔案系統的 FSX 可同時用於上述兩種用途、或者您可以將多個 FSX 用於 ONTAP 檔案系統。
+
+* 您需要知道 AWS 區域、 VPC 和子網路、這些都是 AWS FSX for ONTAP 檔案系統所在的位置。檔案系統必須位於啟用 Amazon bedrock 的 AWS 區域。
+* 您需要考慮要套用至屬於此部署一部分的 AWS 資源的標記金鑰 / 值配對（選用）。
+* 您必須知道金鑰配對資訊、才能安全地連線至 NetApp AI 引擎執行個體。
+
+
+https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["瞭解如何部署及管理適用於 ONTAP 檔案系統的 FSX"^]
+
+--
+

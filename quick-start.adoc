@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: quick-start.html 
+keywords: quick start, knowledge base, chatbot 
+summary: 開始使用貴組織在 Amazon FSX for NetApp ONTAP 檔案系統上的資料來建立知識庫。例如 chatbot 等應用程式將存取此知識庫、為終端使用者提供以組織為中心的回應。 
+---
+= GenAI 快速入門
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+開始使用貴組織在 Amazon FSX for NetApp ONTAP 檔案系統上的資料來建立知識庫。例如 chatbot 等應用程式將存取此知識庫、為終端使用者提供以組織為中心的回應。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] link:requirements.html["設定您的環境以符合 GenAI 需求"]
+[role="quick-margin-para"]
+您將需要 AWS 認證來部署 AWS 基礎架構、部署並探索 ONTAP 檔案系統的 FSX 、您想要整合到知識庫中的資料來源清單、存取 Amazon bedrock AI 服務等。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] link:identify-data-sources.html["識別包含資料來源的 ONTAP 檔案系統的 FSX"]
+[role="quick-margin-para"]
+您將整合至知識庫的資料來源可以位於單一適用於 ONTAP 檔案系統的 FSX 、或是多個適用於 ONTAP 檔案系統的 FSX 上。這些系統可以位於不同的 VPC 中、但必須可在同一個網路中存取。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] link:deploy-infrastructure.html["部署知識庫基礎架構"]
+[role="quick-margin-para"]
+啟動基礎架構部署精靈、在 AWS 環境中部署知識庫基礎架構。此程序會部署 NetApp GenAI 引擎的 EC2 執行個體、以及 ONTAP 檔案系統的 FSX 上的磁碟區、以包含 NetApp AI 引擎資料庫。該 Volume 用於儲存知識庫所使用的向量資料庫。
+
+.下一步
+您現在可以建立知識庫、為終端使用者提供以組織為中心的回應。

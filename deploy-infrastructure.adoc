@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: deploy-infrastructure.html 
+keywords: ai, chatbot, infrastructure, bedrock, fsx for ontap 
+summary: 您必須先在環境中部署 RAG 架構的基礎架構、才能為組織建置適用於 ONTAP 知識庫和應用程式的 FSX 。主要基礎架構元件為 Amazon 基礎架構 AI 服務、 NetApp GenAI 引擎的虛擬機器執行個體、以及 ONTAP 檔案系統的 FSX 。 
+---
+= 部署 GenAI 基礎架構
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您必須先在環境中部署適用於 RAG 架構的 GenAI 基礎架構、才能為組織建置適用於 ONTAP 知識庫和應用程式的 FSX 。主要基礎架構元件為 Amazon 基礎架構服務、 NetApp GenAI 引擎的虛擬機器執行個體、以及 ONTAP 檔案系統的 FSX 。
+
+部署的基礎架構可支援多個知識庫和聊天機器人程式、因此您通常只需要執行一次此工作。
+
+
+
+== 基礎架構詳細資料
+
+您的 GenAI 部署必須位於啟用 Amazon 基礎的 AWS 區域。 https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["檢視支援區域的清單"^]
+
+部署包含下列元件。
+
+Amazon bedrock 服務:: Amazon bedrock 是一項完全託管的服務、可讓您透過單一 API 使用來自頂尖 AI 公司的基礎模型（ FMS ）。它也提供您建置安全泛用 AI 應用程式所需的功能。
++
+--
+https://aws.amazon.com/bedrock/["深入瞭解 Amazon bedrock"^]
+
+--
+NetApp GenAI 引擎的虛擬機器:: NetApp GenAI 引擎會在此程序中部署。它提供從資料來源擷取資料的處理能力、然後將該資料寫入向量資料庫。
+適用於 ONTAP 檔案系統的 FSX:: 適用於 ONTAP 檔案系統的 FSX 可為您的 GenAI 系統提供儲存設備。
++
+--
+部署的單一 Volume 會包含向量資料庫、其中會儲存基礎模型根據您的資料來源所產生的資料。
+
+您將整合至知識庫的資料來源可以位於 ONTAP 檔案系統的相同 FSX 或不同系統上。
+
+NetApp GenAI 引擎會監控並與這兩個磁碟區互動。
+
+--
+
+
+下圖顯示 GenAI 基礎架構。編號 1 、 2 和 3 的元件會在此程序中部署。開始部署之前、必須先具備其他元素。
+
+image:diagram-chatbot-infrastructure.png["AI chatbot 元件的圖表。"]
+
+
+
+== 部署 GenAI 基礎架構
+
+您需要輸入 AWS 認證資料、然後選取適用於 ONTAP 檔案系統的 FSX 、以部署擷取強化（ RAG ）基礎架構。
+
+.開始之前
+開始此程序之前、請確定您的環境符合 link:requirements.html["需求"] 要求。
+
+.步驟
+. 登入 Workload Factory 。
+. 在 AI 工作負載方塊中、選取 * 部署與管理 * 。
+. 檢閱基礎架構圖表、然後選取 * 下一步 * 。
+. 完成「 * AWS 設定 * 」區段中的項目：
++
+.. * AWS 認證 * ：選取或新增 AWS 認證、以提供部署 AWS 資源的權限。
+.. * 位置 * ：選取 AWS 區域、 VPC 和子網路。
++
+GenAI 部署必須位於啟用 Amazon 基礎的 AWS 區域。 https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["檢視支援區域的清單"^]
+
+
+
+. 完成 * 基礎架構設定 * 區段中的項目：
++
+.. * 適用於 ONTAP 檔案系統 * 的 FSX ：選取 ONTAP 檔案系統的 FSX 、以及要部署 GenAI 執行個體資料庫磁碟區的儲存 VM 、然後指定您要用於該磁碟區的名稱。
++
+視 Workload Factory 是否擁有適用於 ONTAP 檔案系統的 FSX 認證而定、您可能需要輸入使用者名稱和密碼。
+
+.. * 標記 * ：輸入您要套用至此部署中所有 AWS 資源的任何標記金鑰 / 值配對。
+.. * 金鑰配對 * ：選取金鑰配對、讓您安全地連線至 NetApp GenAI 引擎執行個體。
+
+
+. 選擇 * 部署 * 開始部署。
+
+
+.結果
+Workload Factory 開始部署 chatbot 基礎架構。此程序最多可能需要10分鐘。
+
+在部署過程中、會設定下列項目：
+
+* 網路與私有端點一起設定。
+* 隨即建立 IAM 角色、執行個體設定檔和安全性群組。
+* GenAI 引擎資料庫（ LanceDB ）的磁碟區是在 ONTAP 檔案系統的 FSX 上建立。
+* 已部署 GenAI 引擎的虛擬機器執行個體。
+

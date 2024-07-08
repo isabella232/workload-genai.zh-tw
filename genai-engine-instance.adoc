@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: genai-engine-instance.html 
+keywords: genai engine, instance, ec2, role, iam role, permissions, security group, inbound, outbound, private endpoints 
+summary: 當您部署 GenAI 基礎架構時、 Workload Factory 會為 GenAI 引擎建立 EC2 執行個體。它也會為此執行個體建立 IAM 角色、安全性群組和私有端點。您可能想要瞭解有關 Workload Factory 在 AWS 環境中建立的這些元件的更多詳細資料。 
+---
+= NetApp GenAI 引擎的元件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+當您部署 GenAI 基礎架構時、 Workload Factory 會為 GenAI 引擎建立 EC2 執行個體。它也會為此執行個體建立 IAM 角色、安全性群組和私有端點。您可能想要瞭解有關 Workload Factory 在 AWS 環境中建立的這些元件的更多詳細資料。
+
+EC2 執行個體類型:: m5.large
+IAM角色:: GenAI 引擎執行個體需要權限、才能將資料區塊傳送至 Amazon 基礎上的嵌入模型、以及與 NetApp AI 服務後端通訊。IAM 角色包括下列權限：
++
+--
+[source, json]
+----
+"ssm:Describe*",
+"ssm:Get*",
+"ssm:List*",
+"ssm:PutInventory",
+"ssm:PutComplianceItems",
+"ssm:PutConfigurePackageResult",
+"ssm:SendCommand",
+"ssm:UpdateAssociationStatus",
+"ssm:UpdateInstanceAssociationStatus",
+"ssm:UpdateInstanceInformation",
+"ssmmessages:*",
+"ec2messages:GetMessages"
+----
+--
+安全性群組:: 傳出規則會對所有流量開放、而傳入規則則會完全關閉。
+私有端點:: 如果目標 VPC 尚未擁有這些端點、 Workload Factory 會為 GenAI 引擎 EC2 執行個體建立私有端點、以便與下列 AWS 服務進行通訊：
++
+--
+* Amazon bedrock
+* Amazon EC2
+* Amazon Elastic Container 登錄（ ECR ）
+* Amazon S3
+* AWS Systems Manager （ SSM ）
+
+
+--
+

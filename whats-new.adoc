@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
+summary: 瞭解 Workload Factory 的 AI 工作負載功能的新功能。 
+---
+= 新功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+瞭解 Workload Factory 的泛用 AI 工作負載功能有哪些新功能。
+
+
+
+== 2024 年 7 月 7 日
+
+
+
+=== GenAI 工作負載工廠的初始版本
+
+初始版本包含開發知識庫的功能、可藉由內嵌組織資料來自訂。使用者可透過聊天機器人應用程式存取知識庫。這項功能可確保針對組織特定問題做出準確且相關的回應、提高所有使用者的滿意度與生產力。
