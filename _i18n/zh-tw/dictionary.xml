@@ -54,7 +54,6 @@
   <block id="80a4d47d289b6794b7af32bf0403d817" category="list-text">根據知識庫中的內容、自動建立對話入門問題。</block>
   <block id="d115eba24b3d1be73af7f0952b82dc13" category="list-text">提供聊天模擬器、讓資料管理員測試與知識庫的聊天。</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">成本</block>
-  <block id="848d5941560ff7e3f492b8bc6ca745d1" category="paragraph">在預覽期間、使用 Workload Factory 的 GenAI 功能並不需要花費任何成本。</block>
   <block id="ca4fec9e2b2e873ba73dde822ed0fd02" category="paragraph">不過、您必須支付所部署的 AWS 資源、才能支援泛用 AI 基礎架構。例如、您將為 Amazon bedrock AI 服務、 ONTAP 檔案系統和儲存容量的 FSX 、以及 GenAI 引擎 EC2 執行個體支付 AWS 費用。</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="section-title">授權</block>
   <block id="0ea77fd2fdca0ee14d426a023ea715ad" category="paragraph">NetApp 不需要特殊授權即可使用工作負載工廠的 AI 功能。</block>
@@ -538,4 +537,5 @@
   <block id="2e800147de9688c09f27dae52c542680" category="sidebar">使用 GenAI 建立知識庫</block>
   <block id="b032727d9e00be7e59aefec94a0972c2" category="sidebar">啟動驗證</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識與支援</block>
+  <block id="3163a16fc98aa29c5fea8b61c62bb459" category="paragraph">使用 Workload Factory 的 GenAI 功能不需花費任何成本。</block>
 </blocks>

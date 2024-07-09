@@ -58,7 +58,7 @@ GenAI 以下列方式協助使用 RAG 建置泛型 AI 應用程式：
 
 == 成本
 
-在預覽期間、使用 Workload Factory 的 GenAI 功能並不需要花費任何成本。
+使用 Workload Factory 的 GenAI 功能不需花費任何成本。
 
 不過、您必須支付所部署的 AWS 資源、才能支援泛用 AI 基礎架構。例如、您將為 Amazon bedrock AI 服務、 ONTAP 檔案系統和儲存容量的 FSX 、以及 GenAI 引擎 EC2 執行個體支付 AWS 費用。
 
