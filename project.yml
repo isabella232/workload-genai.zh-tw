@@ -41,6 +41,8 @@ sidebar:
         url: "/activate-authentication.html"
       - title: 發佈知識庫
         url: "/publish-knowledgebase.html"
+      - title: 建立以 RAG 為基礎的 AI 應用程式
+        url: "/create-application.html"
       - title: 接下來您可以做什麼
         url: "/whats-next.html"
     - title: 管理資料來源

@@ -538,4 +538,9 @@
   <block id="b032727d9e00be7e59aefec94a0972c2" category="sidebar">啟動驗證</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識與支援</block>
   <block id="3163a16fc98aa29c5fea8b61c62bb459" category="paragraph">使用 Workload Factory 的 GenAI 功能不需花費任何成本。</block>
+  <block id="a46c34e822b00eb49125943300225ec1" category="summary">在您建立知識庫並測試自己的聊天機器人程式之後、您就可以開始設定應用程式、讓使用者能夠查詢聊天機器人程式。</block>
+  <block id="4c096c170a3ae328a9df5fb19871a9a7" category="doc">建立以 FSX 支援 ONTAP 知識庫的應用程式</block>
+  <block id="3034501b6830f6e24b0e219fa3565ffb" category="inline-link">瞭解如何在適用於 ONTAP 的 FSX 上建立以 RAG 為基礎的 AI 應用程式</block>
+  <block id="cddb505028d2d2c7026aad1d17c19a05" category="paragraph"><block ref="cddb505028d2d2c7026aad1d17c19a05" category="inline-link-rx"></block></block>
+  <block id="53b343f4a880bcff3b258324a35744ff" category="sidebar">建立以 RAG 為基礎的 AI 應用程式</block>
 </blocks>
