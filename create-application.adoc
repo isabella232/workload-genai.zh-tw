@@ -4,7 +4,7 @@ permalink: create-application.html
 keywords: ai, chatbot, creating, application, knowledge base, rag, retrieval augmented generation 
 summary: 在您建立知識庫並測試自己的聊天機器人程式之後、您就可以開始設定應用程式、讓使用者能夠查詢聊天機器人程式。 
 ---
-= 建立以 FSX 支援 ONTAP 知識庫的應用程式
+= 建立以 RAG 為基礎的 AI 應用程式
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
