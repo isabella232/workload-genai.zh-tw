@@ -15,6 +15,16 @@ summary: 瞭解 Workload Factory 的 AI 工作負載功能的新功能。
 
 
 
+== 2024 年 8 月 4 日
+
+
+
+=== Amazon CloudWatch 記錄整合
+
+現在、泛用 AI 工作負載已與 Amazon CloudWatch 記錄整合、可讓您監控泛用 AI 工作負載記錄檔。
+
+
+
 == 2024 年 7 月 7 日
 
 

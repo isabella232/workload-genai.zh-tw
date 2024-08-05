@@ -90,4 +90,6 @@ Workload Factory 開始部署 chatbot 基礎架構。此程序最多可能需要
 * 隨即建立 IAM 角色、執行個體設定檔和安全性群組。
 * GenAI 引擎資料庫（ LanceDB ）的磁碟區是在 ONTAP 檔案系統的 FSX 上建立。
 * 已部署 GenAI 引擎的虛擬機器執行個體。
+* Amazon bedrock 已設定為使用前置字元的記錄群組、將記錄傳送至 Amazon CloudWatch 記錄檔 `/aws/bedrock/`。
+* GenAI 引擎已設定為使用名稱為的記錄群組、將記錄傳送至 Amazon CloudWatch 記錄檔 `/netapp/wlmai/<tenancyAccountId>/randomId`、其中 `<tenancyAccountID>` 是 https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-account-identifier["BlueXP 帳戶 ID"^] 目前使用者的。
 

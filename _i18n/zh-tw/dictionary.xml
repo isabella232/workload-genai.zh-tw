@@ -388,7 +388,6 @@
   <block id="19761722f9e779bd2a70fef96c24a1bc" category="paragraph">Workload Factory 會發佈知識庫。在知識庫的詳細資料頁面上、狀態會從 * 未發佈 * 變更為 * 已發佈 * 。 *</block>
   <block id="5e92f6a356303934a45930f0e541c6b1" category="paragraph">您現在可以取得知識庫專屬端點的詳細資料。</block>
   <block id="004faa273ca0b2383f0f12b8850c493b" category="list-text">在「已發佈」狀態旁邊、選取 * 檢視 * 。</block>
-  <block id="d1f4efe2fd3a800f4b008e172439fe85" category="paragraph">顯示如何使用 Workload Factory API 存取知識庫的詳細資料。</block>
   <block id="9de2775e528dfff9dd9666885c222272" category="list-text">從「 * 檢視發佈的資訊 * 」對話方塊中、複製可用於將知識庫與應用程式整合的 API 端點。</block>
   <block id="7495d9f71402d3b1d20f08bd19ac6562" category="inline-link">API 文件</block>
   <block id="2cb94eb0648b9f93f300ea0aff833f95" category="paragraph">若要深入瞭解 API 端點、請移至<block ref="c0a9aa55ed57e2e15b2d20baa6a6e023" category="inline-link-rx"></block> 、然後選取「 * AI &gt; 外部 * 」。</block>
@@ -398,7 +397,6 @@
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">一</block>
   <block id="e16edd708081c06a9c8bdef1486a94b4" category="inline-link-macro">設定您的環境以符合 GenAI 需求</block>
   <block id="0b0e916064e065ab12e1db6735832ef0" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="d4a51aa0811f51e3206f49b62f46f1ef" category="inline-link-macro-rx"></block></block>
-  <block id="926f216b1b078ff9ce47e61e22932514" category="paragraph">您將需要 AWS 認證來部署 AWS 基礎架構、部署並探索 ONTAP 檔案系統的 FSX 、您想要整合到知識庫中的資料來源清單、存取 Amazon bedrock AI 服務等。</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">二</block>
   <block id="36ec882c51ea2d7689f78bed44b7fdaa" category="inline-link-macro">識別包含資料來源的 ONTAP 檔案系統的 FSX</block>
   <block id="cc9cd1c7d0a54d3fe49ca467804963fb" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> <block ref="7206191241f03719b7415c03564b4c6e" category="inline-link-macro-rx"></block></block>
@@ -539,8 +537,17 @@
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識與支援</block>
   <block id="3163a16fc98aa29c5fea8b61c62bb459" category="paragraph">使用 Workload Factory 的 GenAI 功能不需花費任何成本。</block>
   <block id="a46c34e822b00eb49125943300225ec1" category="summary">在您建立知識庫並測試自己的聊天機器人程式之後、您就可以開始設定應用程式、讓使用者能夠查詢聊天機器人程式。</block>
-  <block id="4c096c170a3ae328a9df5fb19871a9a7" category="doc">建立以 FSX 支援 ONTAP 知識庫的應用程式</block>
   <block id="3034501b6830f6e24b0e219fa3565ffb" category="inline-link">瞭解如何在適用於 ONTAP 的 FSX 上建立以 RAG 為基礎的 AI 應用程式</block>
   <block id="cddb505028d2d2c7026aad1d17c19a05" category="paragraph"><block ref="cddb505028d2d2c7026aad1d17c19a05" category="inline-link-rx"></block></block>
   <block id="53b343f4a880bcff3b258324a35744ff" category="sidebar">建立以 RAG 為基礎的 AI 應用程式</block>
+  <block id="da1fd32e4f4851fbf4922d1c55e8fcc0" category="list-text">從「知識庫」清查頁面中、選取您要啟動驗證的知識庫。</block>
+  <block id="d71d72ee7bc5c79bade09f02715592c3" category="paragraph">知識庫的驗證現已啟用、您可以使用 API 端點與知識庫互動、並將知識庫與 chatbot 應用程式整合。</block>
+  <block id="c83d7c23906c063b64dd22d30483cb24" category="list-text">Amazon bedrock 已設定為使用前置字元的記錄群組、將記錄傳送至 Amazon CloudWatch 記錄檔<block ref="26245dda4fa653114e9a41956171489d" prefix=" " category="inline-code"></block>。</block>
+  <block id="6fbe5ae14d71eb3abafcfce8f7fe977a" category="inline-link">BlueXP 帳戶 ID</block>
+  <block id="af270465b477b731bafe1e4859956cc4" category="list-text">GenAI 引擎已設定為使用名稱為的記錄群組、將記錄傳送至 Amazon CloudWatch 記錄檔<block ref="267ed14c989ee7da1da6b5683a1ba205" prefix=" " category="inline-code"></block>、其中<block ref="44014fe9a7dd0d34b59279b9206b84b3" prefix=" " category="inline-code"></block> 是<block ref="bffdd6286177ca86f99ccefe410268a2" category="inline-link-rx"></block> 目前使用者的。</block>
+  <block id="b3ec171bb9a8cc7c009e2caf4d945535" category="paragraph">畫面會顯示如何使用 Workload Factory API 存取知識庫的詳細資料。</block>
+  <block id="f48c3e82e3f3b9cc782fe1277e362ec5" category="paragraph">您將需要 AWS 認證來部署 AWS 基礎架構、部署並探索 ONTAP 檔案系統的 FSX 、您想要整合到知識庫中的資料來源清單、存取 Amazon bedrock AI 服務等。</block>
+  <block id="691e71734464aaf43017f5b033e54559" category="section-title">2024 年 8 月 4 日</block>
+  <block id="ec7827c2237ae7b863c9ba93b519cbc1" category="section-title">Amazon CloudWatch 記錄整合</block>
+  <block id="64c1dd8cb5f86710c3293cc9807760fb" category="paragraph">現在、泛用 AI 工作負載已與 Amazon CloudWatch 記錄整合、可讓您監控泛用 AI 工作負載記錄檔。</block>
 </blocks>
