@@ -12,7 +12,6 @@
   <block id="65f706122d6156fd52b6cb2ff2214944" category="list-text">選取 * 新增 * 將此資料來源新增至您的知識庫。</block>
   <block id="f1af0b71f33a2e37e9e17b100f3c0b1e" category="summary">啟動知識庫的驗證、以便在將知識庫與 chatbot 應用程式整合時、需要權杖驗證和 ACL 。</block>
   <block id="970a6e4ed60b5e3eb0f25c2ab67433fe" category="doc">啟動知識庫的外部驗證</block>
-  <block id="f739f01e878ac777330d67ca4158aece" category="paragraph">啟動知識庫的驗證、以便在使用 API 端點將知識庫與 chatbot 應用程式整合時、需要權杖驗證和 ACL 。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步驟</block>
   <block id="958a8f384aa34f23244386f38ed3aeab" category="list-text">從「知識庫」清查頁面中、選取您要發佈的知識庫。</block>
   <block id="2041999f6b6b70199d1267ee84f453a6" category="inline-image-macro">選項按鈕</block>
@@ -20,12 +19,6 @@
   <block id="717cb2ec03a878d541d7d67390c70a02" category="list-text">選取 * 動作 * 功能表、然後選取 * 管理驗證設定 * 。</block>
   <block id="01345ed4b5ff7f7a1a05a52074ad1caf" category="list-text">設定驗證：</block>
   <block id="d408b7a47989c152a2aa2d90a6528cd8" category="list-text">選取 * 啟動驗證設定 * 。</block>
-  <block id="06b97c41aa527667da7e7e745c867d3c" category="list-text">提供必要資訊：</block>
-  <block id="f67d4abfe5d3ad3bdc35adca8802160f" category="list-text">演算法</block>
-  <block id="ef1e6887c579ba81dcedc3f4e3793cd2" category="list-text">對象</block>
-  <block id="51360304ea03557e79bdf5ff9cd2e234" category="list-text">發卡行</block>
-  <block id="9ebac1089717ab190990b2b9a0fd554c" category="list-text">JWKS URI</block>
-  <block id="9df3162c758e92127fd15a555cd18f04" category="paragraph">您應該從驗證提供者取得這些欄位的值。</block>
   <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">選擇*保存*。</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
   <block id="5d8cae383bd52502a39a1612796fb31f" category="paragraph">您現在擁有已發佈的知識庫和獨特的端點、可用來將知識庫與 chatbot 應用程式整合。</block>
@@ -550,4 +543,13 @@
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">2024 年 8 月 4 日</block>
   <block id="ec7827c2237ae7b863c9ba93b519cbc1" category="section-title">Amazon CloudWatch 記錄整合</block>
   <block id="64c1dd8cb5f86710c3293cc9807760fb" category="paragraph">現在、泛用 AI 工作負載已與 Amazon CloudWatch 記錄整合、可讓您監控泛用 AI 工作負載記錄檔。</block>
+  <block id="c34bf4f0a7173f53dc110e7f41c2e0d0" category="paragraph">啟動知識庫的驗證、以便在使用 API 端點將知識庫與 chatbot 應用程式整合時、需要權杖驗證和 ACL 。當您啟動驗證時、會產生 JSON Web Token 、用於從 chatbot 用戶端向知識庫要求 API 。</block>
+  <block id="d4cc00616339f0819c8ca53d7850ca2c" category="list-text">提供必要資訊。提供範例、但您應該從驗證供應商處取得這些欄位的值：</block>
+  <block id="8fbebd38c35cb217ad6437410297b5e7" category="list-text">* 演算法 * ：驗證提供者使用的簽署演算法。</block>
+  <block id="59575929b41aa989abd4d539bc31b47a" category="list-text">*Audience * （選用）：包含驗證權杖（有時為 URL ）的指定接收者字串。</block>
+  <block id="8815fb464bfa6c8533fc5ae4e04b9c5a" category="list-text">* 發卡行 * ：識別發出權杖之提供者的字串。</block>
+  <block id="9f921e08c2635ce0ca6d5507cf90b6d2" category="paragraph">例如、 Amazon Cognito 使用具有下列格式的發卡行字串：</block>
+  <block id="69a143a2f8c7c42f85ef0de9978c131d" category="paragraph">其中<block ref="d1dc4390a2dfb7cdc1a097e10b04acdf" prefix=" " category="inline-code"></block> 是包含使用者集區的 AWS 區域、<block ref="d47ea98789cbedeffd13a02b7b550538" prefix=" " category="inline-code"></block> 也是您的使用者集區 ID 。您可以使用下列命令擷取使用者集區 ID ：</block>
+  <block id="563ae45eabbbd334a2af58d93ded707c" category="list-text">*JWKS URI* ：提供驗證此 Token 簽章所需之公開金鑰的 URI 字串。</block>
+  <block id="2caafa02c784bfe569590254865dd928" category="paragraph">例如、 Amazon Cognito 使用以下格式的 JWKS URI 字串：</block>
 </blocks>

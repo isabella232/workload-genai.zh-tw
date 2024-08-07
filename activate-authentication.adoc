@@ -11,7 +11,7 @@ summary: 啟動知識庫的驗證、以便在將知識庫與 chatbot 應用程�
 
 
 [role="lead"]
-啟動知識庫的驗證、以便在使用 API 端點將知識庫與 chatbot 應用程式整合時、需要權杖驗證和 ACL 。
+啟動知識庫的驗證、以便在使用 API 端點將知識庫與 chatbot 應用程式整合時、需要權杖驗證和 ACL 。當您啟動驗證時、會產生 JSON Web Token 、用於從 chatbot 用戶端向知識庫要求 API 。
 
 .步驟
 . 從「知識庫」清查頁面中、選取您要啟動驗證的知識庫。
@@ -20,18 +20,47 @@ summary: 啟動知識庫的驗證、以便在將知識庫與 chatbot 應用程�
 . 設定驗證：
 +
 .. 選取 * 啟動驗證設定 * 。
-.. 提供必要資訊：
+.. 提供必要資訊。提供範例、但您應該從驗證供應商處取得這些欄位的值：
 +
-*** 演算法
-*** 對象
-*** 發卡行
-*** JWKS URI
-
-
-
+*** * 演算法 * ：驗證提供者使用的簽署演算法。
+*** *Audience * （選用）：包含驗證權杖（有時為 URL ）的指定接收者字串。
+*** * 發卡行 * ：識別發出權杖之提供者的字串。
++
+例如、 Amazon Cognito 使用具有下列格式的發卡行字串：
 
 +
-您應該從驗證提供者取得這些欄位的值。
+[listing]
+----
+https://cognito-idp-<region>.amazonaws.com/<UserPoolID>
+----
++
+其中 `<region>` 是包含使用者集區的 AWS 區域、 `<UserPoolID>` 也是您的使用者集區 ID 。您可以使用下列命令擷取使用者集區 ID ：
+
++
+[listing]
+----
+aws cognito-idp list-user-pools --max-results=60 --output=table
+----
+*** *JWKS URI* ：提供驗證此 Token 簽章所需之公開金鑰的 URI 字串。
++
+例如、 Amazon Cognito 使用以下格式的 JWKS URI 字串：
+
++
+[listing]
+----
+https://cognito-idp.<region>.amazonaws.com/<userPoolId>/.well-known/jwks.json
+----
++
+其中 `<region>` 是包含使用者集區的 AWS 區域、 `<UserPoolID>` 也是您的使用者集區 ID 。您可以使用下列命令擷取使用者集區 ID ：
+
++
+[listing]
+----
+aws cognito-idp list-user-pools --max-results=60 --output=table
+----
+
+
+
 
 . 選擇*保存*。
 
