@@ -543,13 +543,13 @@
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">2024 年 8 月 4 日</block>
   <block id="ec7827c2237ae7b863c9ba93b519cbc1" category="section-title">Amazon CloudWatch 記錄整合</block>
   <block id="64c1dd8cb5f86710c3293cc9807760fb" category="paragraph">現在、泛用 AI 工作負載已與 Amazon CloudWatch 記錄整合、可讓您監控泛用 AI 工作負載記錄檔。</block>
-  <block id="c34bf4f0a7173f53dc110e7f41c2e0d0" category="paragraph">啟動知識庫的驗證、以便在使用 API 端點將知識庫與 chatbot 應用程式整合時、需要權杖驗證和 ACL 。當您啟動驗證時、會產生 JSON Web Token 、用於從 chatbot 用戶端向知識庫要求 API 。</block>
   <block id="d4cc00616339f0819c8ca53d7850ca2c" category="list-text">提供必要資訊。提供範例、但您應該從驗證供應商處取得這些欄位的值：</block>
   <block id="8fbebd38c35cb217ad6437410297b5e7" category="list-text">* 演算法 * ：驗證提供者使用的簽署演算法。</block>
-  <block id="59575929b41aa989abd4d539bc31b47a" category="list-text">*Audience * （選用）：包含驗證權杖（有時為 URL ）的指定接收者字串。</block>
   <block id="8815fb464bfa6c8533fc5ae4e04b9c5a" category="list-text">* 發卡行 * ：識別發出權杖之提供者的字串。</block>
   <block id="9f921e08c2635ce0ca6d5507cf90b6d2" category="paragraph">例如、 Amazon Cognito 使用具有下列格式的發卡行字串：</block>
   <block id="69a143a2f8c7c42f85ef0de9978c131d" category="paragraph">其中<block ref="d1dc4390a2dfb7cdc1a097e10b04acdf" prefix=" " category="inline-code"></block> 是包含使用者集區的 AWS 區域、<block ref="d47ea98789cbedeffd13a02b7b550538" prefix=" " category="inline-code"></block> 也是您的使用者集區 ID 。您可以使用下列命令擷取使用者集區 ID ：</block>
   <block id="563ae45eabbbd334a2af58d93ded707c" category="list-text">*JWKS URI* ：提供驗證此 Token 簽章所需之公開金鑰的 URI 字串。</block>
   <block id="2caafa02c784bfe569590254865dd928" category="paragraph">例如、 Amazon Cognito 使用以下格式的 JWKS URI 字串：</block>
+  <block id="566673c66dc53f65f0662ca186b4ff33" category="paragraph">啟動知識庫的驗證、以便在使用 API 端點將知識庫與 chatbot 應用程式整合時、需要權杖驗證和 ACL 。當您啟動驗證時、您可以設定 JSON Web Token 的設定、用於從 chatbot 用戶端向知識庫提出 API 要求。</block>
+  <block id="af3e21688164f21808a96c579519e58a" category="list-text">* 目標對象 * （選用）：包含目標權杖收件者的字串（有時為 URL ）。</block>
 </blocks>
