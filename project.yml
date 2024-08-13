@@ -29,6 +29,8 @@ sidebar:
       url: "/identify-data-sources.html"
     - title: 部署知識庫基礎架構
       url: "/deploy-infrastructure.html"
+    - title: 使用外部的 chatbot 應用程式範例
+      url: "/example-chatbot-application.html"
   - title: 使用 GenAI 建立知識庫
     entries:
     - title: 建立知識庫

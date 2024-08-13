@@ -552,4 +552,23 @@
   <block id="2caafa02c784bfe569590254865dd928" category="paragraph">例如、 Amazon Cognito 使用以下格式的 JWKS URI 字串：</block>
   <block id="566673c66dc53f65f0662ca186b4ff33" category="paragraph">啟動知識庫的驗證、以便在使用 API 端點將知識庫與 chatbot 應用程式整合時、需要權杖驗證和 ACL 。當您啟動驗證時、您可以設定 JSON Web Token 的設定、用於從 chatbot 用戶端向知識庫提出 API 要求。</block>
   <block id="af3e21688164f21808a96c579519e58a" category="list-text">* 目標對象 * （選用）：包含目標權杖收件者的字串（有時為 URL ）。</block>
+  <block id="9f6d7e16caf2363ed289cf415c43d68e" category="summary">您可以安裝並執行範例 chatbot 應用程式來測試您的知識庫、並瞭解如何使用 Workload Factory API 來建立您自己的泛用 AI 應用程式。</block>
+  <block id="ce8f8573f53c4f625df29c794cd7d82a" category="doc">使用外部的 chatbot 應用程式範例</block>
+  <block id="15abf1d561eb7f7ddb0e28f6c4562a8c" category="paragraph">在您設定、啟動及發佈知識庫之後、外部應用程式開發人員可以設定並執行 NetApp 提供的開放原始碼範例 chatbot 應用程式、與您的知識庫互動、並學習如何使用工作負載工廠 API 來建立自己的泛化 AI 應用程式。</block>
+  <block id="39f8e13a71ec862a906b446df493f119" category="list-text"><block ref="34b37227349aa26ad88498e81a1ea1af" category="inline-link-macro-rx"></block>。</block>
+  <block id="804d039033ead5360f1a1a7d2c362f11" category="list-text"><block ref="30b5e2b0cf5de93d45c874ca5c8c6a31" category="inline-link-macro-rx"></block> 以瞭解您建立的知識庫。</block>
+  <block id="73e5c231c5129b847eb8645a0a52a595" category="paragraph">這可讓知識庫驗證 API 要求、並在使用 API 端點時要求權杖驗證和 ACL 。</block>
+  <block id="9422cba0464f58f3b37b0745e5b00b27" category="admonition">與此知識庫整合的外部聊天應用程式需要使用您在知識庫驗證設定中所設定的相同驗證提供者（發卡行）。</block>
+  <block id="4608fcb51404075a263bdb6e179b0a2d" category="inline-link-macro">發佈知識庫</block>
+  <block id="722a513785392127bf30ac1365e83362" category="list-text"><block ref="55b5b45f76a7f4e93c30f45e62e61f7a" category="inline-link-macro-rx"></block> 啟用外部應用程式的 API 存取。</block>
+  <block id="1119e2011350c0d24f44e3aaf7f8fd74" category="paragraph">知識庫發佈後、即可從外部存取 API 端點、您可以將知識庫與外部聊天應用程式（例如、 chatbot 應用程式範例）整合。</block>
+  <block id="d3b7c913cd04ebfec0e9ec32cb6fd58c" category="inline-link">GitHub</block>
+  <block id="f49a88c7b28444b7b991e9803b076e62" category="list-text">從下載範例 chatbot 應用程式套件<block ref="61cc64ceefa7eff1b19d7a7c0c883e1f" category="inline-link-rx"></block>。</block>
+  <block id="188374f3639ec34e68d38eae79f19aae" category="list-text">請依照套件中的 README 檔案中的指示、安裝並執行 chatbot 應用程式。</block>
+  <block id="c2847f2ccebd5c687f46c7bf12c1be5c" category="inline-link"><block ref="c2847f2ccebd5c687f46c7bf12c1be5c" category="inline-link-rx"></block></block>
+  <block id="4fc1d0607a3fe50db5ef612a2c4a178e" category="list-text">瀏覽至<block ref="0e14f9ffc1d2673bd92f13a4ac79e32e" category="inline-link-rx"></block> 以登入應用程式。</block>
+  <block id="5f62c285aea87618ed1381c43c7ae2cf" category="paragraph">此時會出現 chatbot 應用程式範例。</block>
+  <block id="d59048f21fd887ad520398ce677be586" category="section-title">深入瞭解</block>
+  <block id="862b02acae8afc7a8e5ed9bf4c7cb18e" category="inline-link">Workload Factory API 文件</block>
+  <block id="39d0fcde59bc31b066cd026cdc9718f8" category="paragraph"><block ref="39d0fcde59bc31b066cd026cdc9718f8" category="inline-link-rx"></block></block>
 </blocks>
